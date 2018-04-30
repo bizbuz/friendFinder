@@ -9,6 +9,7 @@ module.exports = function(app) {
 	//get friend 
 	app.get("/api/friends", function(req,res){
 		res.json(friends);
+		console.log(friends); 
 	})
 
 	//post data to friends.js 
@@ -16,9 +17,9 @@ module.exports = function(app) {
 
 		//create an object for the correct match 
 		var match = {
-			name = "",
-			photo = "",
-			difference = 100 
+			name: "",
+			photo: "",
+			difference: 100 
 		}; 
 
 		//get survey data and score from the survey submit request
@@ -53,6 +54,8 @@ module.exports = function(app) {
 
 		}
 
+		console.log(data); 
+		console.log(friends); 
 		//save the new data
 		friends.push(data); 
 
